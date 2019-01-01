@@ -151,7 +151,7 @@ module Kumogata2::CLI
       opt.on(''  , '--[no-]ignore-all-space')   {|v| options[:ignore_all_space] = v }
       opt.on(''  , '--[no-]debug')              {|v| options[:debug]            = v }
 
-      opt.parse!
+      opt.parse!(argv)
 
       unless (command = argv.shift)
         puts opt.help
